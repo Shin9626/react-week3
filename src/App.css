@@ -1,0 +1,37 @@
+.App {
+    margin: auto;
+    width: 75%;
+    background-color: beige;
+}
+
+.nav-link {
+    display: flex;
+    justify-content: space-around;
+    background-color: aquamarine;
+}
+
+.Layout {
+    text-align: center;
+}
+
+.Header {
+    border: 5px wheat solid;
+}
+
+.Footer {
+    border: 5px wheat solid;
+}
+
+.tour-item-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tour-item-content {
+    padding: 25px 50px;
+    width: 80%;
+    line-height: 24px;
+    letter-spacing: 1px;
+}

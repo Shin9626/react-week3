@@ -3,30 +3,31 @@ import {
   HashRouter,
   NavLink,
   useNavigate,
-  Outlet,
   Route,
   Routes,
   useParams,
 } from 'react-router-dom';
 import Navbar from './conponents/Navbar';
-import Header from './conponents/Header';
-import Footer from './conponents/Footer';
 import Home from './conponents/Home';
 import List from './conponents/List';
-
+import Layout from './conponents/Layout';
+import Spot from './conponents/Spot'
 
 function App() {
   return (
     <div className="App">
       <HashRouter>
         <Navbar/>
-        <Header/>
         <Routes>
-          <Route path="/" element={<Home />}/>
-          <Route path="list" element={<List />}/>
-          <Route path="*" element={<h1>找不到該頁面</h1>}/>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="tour_list">
+              <Route index element={<List />} />
+              <Route path=":Id" element={<Spot />} />
+            </Route>
+            <Route path="*" element={<h1>找不到該頁面</h1>} />
+          </Route>   
         </Routes>
-        <Footer/>
       </HashRouter>
     </div>
   );

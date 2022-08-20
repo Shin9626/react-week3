@@ -9,7 +9,7 @@ function Navbar() {
       <NavLink to="/">
         <p>首頁</p>
       </NavLink>
-      <NavLink to="/list">
+      <NavLink to="/tour_list">
         <p>列表</p>
       </NavLink>
       <NavLink to="/faq">

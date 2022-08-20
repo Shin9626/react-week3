@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <div>
+    <div className="Footer">
       <h2>我是一個表尾</h2>
     </div>
   );

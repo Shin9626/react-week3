@@ -49,8 +49,8 @@ function List() {
   },[])
   
   return (
-    <div>
-      <h2>高雄旅遊景點</h2>
+    <div className="tourlist">
+      { loading ? <></> : <h2>高雄旅遊景點</h2>}
       <div className="tourlist-box">
         { loading ? <Loading/> : <ListItems data={data}/>}
       </div>   

@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap');
+
 .App {
-    display: flex;
-    flex-direction: column;
+    font-family: 'Noto Sans TC', sans-serif;
     background-color: beige;
 }
 
@@ -12,7 +13,7 @@
 }
 
 .nav-link {
-    width: 75%;
+    width: 70%;
     display: flex;
     justify-content: space-around;
 }
@@ -31,10 +32,15 @@
 }
 
 .Layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
 }
 
 .main {
+    display: flex;
+    justify-content: center;
     min-height: 100vh;
     flex-grow: 1;
 }
@@ -50,17 +56,35 @@
     background-color: #352f2d;
 }
 
+.tourlist {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .tourlist-box {
     padding: 10px;
+    width: 75%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
+@media screen and (max-width: 700px){
+    .tourlist-box {
+        width: 100%;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
 .card {
     margin: 10px;
-    min-width: 350px;
-    max-width: 350px;
+    width: 280px;
     height: 300px;
     border-radius: 10px;
     background-color: rgb(255, 251, 241);
@@ -72,7 +96,7 @@
 .card:hover {
     background-color: rgb(231, 202, 128);
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
+}
 
 .card a {
     display: flex;
@@ -86,21 +110,36 @@
     text-decoration: none;
 }
 
+.card img {
+    opacity: 0.7;
+}
+
+.card img:hover {
+    opacity: 1;
+}
+
+
 .tour-item-box {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
 .tour-item-box img {
-    border-radius: 10px;
+    width: 100%;
     box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
 }
 
+@media screen and (min-width: 700px){
+    .tour-item-box img {
+        margin-top: 32px;
+        width: 100%;
+        box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+    }    
+}
+
 .tour-item-content {
-    padding: 25px 50px;
-    width: 80%;
+    padding: 1px 50px;
     line-height: 24px;
     letter-spacing: 1px;
 }

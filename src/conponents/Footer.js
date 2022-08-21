@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <div className="Footer">
-      <h2>我是一個表尾</h2>
+      <p>本網站為練習用途</p>
     </div>
   );
 }

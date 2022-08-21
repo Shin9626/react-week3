@@ -23,9 +23,17 @@ function List() {
   return (
     <div>
       <h3>高雄旅遊景點</h3>
-      <ul>
-        {data.map(item => <li key={item.Id}><a href="#" onClick={e => handleGoToSpot(e, item)}>{item.Name}</a></li>)}
-      </ul>
+      <div className="tourlist-box">
+        {
+          data.map(item => 
+            <div className="card" key={item.Id}>
+              <a href="#" onClick={e => handleGoToSpot(e, item)}>
+                <img src={item.Picture1} width="300" height="240"/>
+                <p>{item.Name}</p>
+              </a>
+            </div>)
+        }
+      </div>
     </div>
   );
 }

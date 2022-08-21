@@ -1,11 +1,8 @@
 import './App.css';
 import {
   HashRouter,
-  NavLink,
-  useNavigate,
   Route,
   Routes,
-  useParams,
 } from 'react-router-dom';
 import Navbar from './conponents/Navbar';
 import Home from './conponents/Home';
@@ -17,7 +14,6 @@ function App() {
   return (
     <div className="App">
       <HashRouter>
-        <Navbar/>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />

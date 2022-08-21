@@ -1,17 +1,42 @@
 .App {
-    margin: auto;
-    width: 75%;
+    display: flex;
+    flex-direction: column;
     background-color: beige;
 }
 
-.nav-link {
+.Navbar {
     display: flex;
     justify-content: space-around;
-    background-color: aquamarine;
+    background-color: rgb(219 139 70);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.nav-link {
+    width: 75%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-link a {
+    width: 100%;
+    color: seashell;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.nav-link a:hover {
+    background-color: rgb(187, 90, 46);
 }
 
 .Layout {
     text-align: center;
+}
+
+.main {
+    min-height: 100vh;
+    flex-grow: 1;
 }
 
 .Header {
@@ -19,7 +44,45 @@
 }
 
 .Footer {
-    border: 5px wheat solid;
+    height: 50px;
+    padding: 5px;
+    color: whitesmoke;
+    background-color: #9f3916;
+}
+
+.tourlist-box {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin: 10px;
+    min-width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    background-color: rgb(255 247 226);
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    background-color: rgb(231, 202, 128);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+.card a {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 10px;
+
+    color: rgb(63, 57, 57);
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 .tour-item-box {

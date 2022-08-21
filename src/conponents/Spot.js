@@ -14,9 +14,11 @@ function Spot() {
       <h2>{data.Name}</h2>
       <img src={data.Picture1} width="95%"/>
       <div className="tour-item-content">
-        <p>{data.Toldescribe}</p>
+        <p>{data.Description}</p>
       </div>
-      <p>{data.Add}</p>
+      <p>聯絡電話：{data.Tel}</p>
+      開放時間：{data.Opentime}
+      <p>景點地址：{data.Add}</p>
     </div>
   );
 }

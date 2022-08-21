@@ -5,16 +5,18 @@ import {
 
 function Navbar() {
   return (
-    <div className="nav-link">
-      <NavLink to="/">
-        <p>首頁</p>
-      </NavLink>
-      <NavLink to="/tour_list">
-        <p>列表</p>
-      </NavLink>
-      <NavLink to="/faq">
-        <p>FAQ</p>
-      </NavLink>
+    <div className='Navbar'>
+      <div className="nav-link">
+        <NavLink to="/">
+          <p>首頁</p>
+        </NavLink>
+        <NavLink to="/tour_list">
+          <p>景點列表</p>
+        </NavLink>
+        <NavLink to="/faq">
+          <p>FAQ</p>
+        </NavLink>
+      </div>
     </div>
   );
 }

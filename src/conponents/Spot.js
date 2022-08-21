@@ -12,7 +12,7 @@ function Spot() {
   return (
     <div className="tour-item-box">
       <h2>{data.Name}</h2>
-      <img src={data.Picture1} width="95%"/>
+      <img src={data.Picture1} width="80%"/>
       <div className="tour-item-content">
         <p>{data.Description}</p>
       </div>

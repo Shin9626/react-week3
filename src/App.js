@@ -21,7 +21,7 @@ function App() {
               <Route index element={<List />} />
               <Route path=":Id" element={<Spot />} />
             </Route>
-            <Route path="*" element={<h1>找不到該頁面</h1>} />
+            <Route path="*" element={<h2>找不到該頁面因為，我沒設定這頁的路由</h2>} />
           </Route>   
         </Routes>
       </HashRouter>

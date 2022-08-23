@@ -8,7 +8,8 @@ import Navbar from './conponents/Navbar';
 import Home from './conponents/Home';
 import List from './conponents/List';
 import Layout from './conponents/Layout';
-import Spot from './conponents/Spot'
+import Spot from './conponents/Spot';
+import ErrorPage from './conponents/ErrorPage';
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
               <Route index element={<List />} />
               <Route path=":Id" element={<Spot />} />
             </Route>
-            <Route path="*" element={<h2>找不到該頁面因為，我沒設定這頁的路由</h2>} />
+            <Route path="*" element={<ErrorPage />} />
           </Route>   
         </Routes>
       </HashRouter>

@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <div className="Footer">
-      <p>本網站為練習用途 @六角學院 2022 React 讀書會</p>
+      <p>Shin9626 @ 六角學院 2022 React 讀書會練習作業</p>
     </div>
   );
 }

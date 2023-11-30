@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { SpotWrapper, Items, Item } from "./styled";
-import { Text } from "../../UtilityStyled";
 import Loading from "../../components/Loading";
 import Selector from "../../components/Selector";
 import CardSpot from "../../components/Card";
@@ -38,7 +37,7 @@ const Spots = () => {
 
   return (
     <SpotWrapper>
-      <Text>選擇行政區後可以產生對應景點列表，點擊該景點會出現詳細介紹～</Text>
+      <p>選擇行政區後可以產生對應景點列表，點擊該景點會出現詳細介紹～</p>
       <Selector selectedSpot={selectedSpot} setSelectedSpot={setSelectedSpot} />
       <Items>
         {selectedSpot &&

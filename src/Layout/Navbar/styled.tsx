@@ -1,7 +1,6 @@
-import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-const NavWrapper = styled.nav`
+export const NavWrapper = styled.nav`
   display: flex;
   justify-content: center;
 
@@ -10,7 +9,7 @@ const NavWrapper = styled.nav`
   color: white;
 `;
 
-const Links = styled.div`
+export const Links = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,15 +37,3 @@ const Links = styled.div`
     }
   }
 `;
-
-const Navbar = () => (
-  <NavWrapper>
-    <Links>
-      <NavLink to="/">首頁</NavLink>
-      <NavLink to="/spots">景點</NavLink>
-      <NavLink to="/faq">FAQ</NavLink>
-    </Links>
-  </NavWrapper>
-);
-
-export default Navbar;

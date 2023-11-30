@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Wrapper = styled.section`
+export const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,5 +10,3 @@ const Wrapper = styled.section`
 
   background-color: #ffefd3;
 `;
-
-export default Wrapper;

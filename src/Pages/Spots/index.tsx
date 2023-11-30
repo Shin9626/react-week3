@@ -1,45 +1,9 @@
 import { useState, useEffect } from "react";
-import styled from "styled-components";
-import Text from "../components/styles/Text";
-import Wrapper from "../components/styles/Wrapper";
-import Loading from "../components/Loading";
-import Selector from "../components/Selector";
-import CardSpot from "../components/CardSpot";
-
-const SpotWrapper = styled(Wrapper)`
-  justify-content: start;
-
-  padding: 80px 40px;
-`;
-
-const Items = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-
-  max-width: 1224px;
-`;
-
-const Item = styled.li`
-  display: flex;
-  flex-direction: column;
-
-  padding: 8px;
-  padding-bottom: 20px;
-  width: 400px;
-
-  border: 1px solid #001b2e;
-  border-radius: 16px;
-
-  background-color: white;
-
-  text-align: center;
-
-  overflow: hidden;
-  cursor: pointer;
-
-  box-sizing: border-box;
-`;
+import { SpotWrapper, Items, Item } from "./styled";
+import { Text } from "../../UtilityStyled";
+import Loading from "../../components/Loading";
+import Selector from "../../components/Selector";
+import CardSpot from "../../components/Card";
 
 const Spots = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -76,7 +40,6 @@ const Spots = () => {
     <SpotWrapper>
       <Text>選擇行政區後可以產生對應景點列表，點擊該景點會出現詳細介紹～</Text>
       <Selector selectedSpot={selectedSpot} setSelectedSpot={setSelectedSpot} />
-      {isLoading && <Loading />}
       <Items>
         {selectedSpot &&
           spotList.map((item, index) => {
@@ -88,6 +51,8 @@ const Spots = () => {
               );
           })}
       </Items>
+      {/* Loading animation*/}
+      {isLoading && <Loading />}
     </SpotWrapper>
   );
 };

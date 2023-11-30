@@ -1,8 +1,8 @@
 import { HashRouter, Route, Routes } from "react-router-dom";
-import Layout from "./layouts/Layout";
-import Home from "./pages/Home";
-import Spots from "./pages/Spots";
-import Error from "./pages/Error";
+import Layout from "./Layout";
+import Home from "./Pages/Home";
+import Spots from "./Pages/Spots";
+import Error from "./Pages/Error";
 
 function App() {
   return (

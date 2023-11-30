@@ -1,15 +1,6 @@
 import { ChangeEvent } from "react";
-import styled from "styled-components";
-import district from "../constants/zip_code.json";
-
-const SelectorContainer = styled.div`
-  select {
-    padding: 4px;
-    width: 150px;
-
-    font-size: 20px;
-  }
-`;
+import { SelectorContainer } from "./styled";
+import district from "../../constants/zip_code.json";
 
 const Selector = (props: SelectorProps) => {
   const { selectedSpot, setSelectedSpot } = props;

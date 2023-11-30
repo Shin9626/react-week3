@@ -1,14 +1,7 @@
 import { Outlet } from "react-router-dom";
+import { PageWrapper } from "./styled";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import styled from "styled-components";
-
-const PageWrapper = styled.main`
-  display: flex;
-  flex-direction: column;
-
-  min-height: 100vh;
-`;
 
 const Layout = () => {
   return (

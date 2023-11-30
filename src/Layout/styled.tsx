@@ -5,6 +5,4 @@ export const PageWrapper = styled.main`
   flex-direction: column;
 
   min-height: 100vh;
-
-  font-size: 24px;
 `;

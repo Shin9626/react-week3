@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const LoadingWrapper = styled.div`
+export const LoadingWrapper = styled.div`
   position: absolute;
   top: 0;
   z-index: 100;
@@ -15,7 +15,7 @@ const LoadingWrapper = styled.div`
   background-color: rgba(50, 50, 50, 0.5);
 `;
 
-const LoadingAnimation = styled.span`
+export const LoadingAnimation = styled.span`
   width: 48px;
   height: 48px;
   position: relative;
@@ -74,13 +74,3 @@ const LoadingAnimation = styled.span`
     }
   }
 `;
-
-const Loading = () => {
-  return (
-    <LoadingWrapper>
-      <LoadingAnimation />
-    </LoadingWrapper>
-  );
-};
-
-export default Loading;

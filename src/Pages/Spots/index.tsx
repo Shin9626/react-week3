@@ -3,9 +3,11 @@ import { SpotWrapper, Items, Item } from "./styled";
 import Loading from "../../components/Loading";
 import Selector from "../../components/Selector";
 import CardSpot from "../../components/Card";
+import Info from "../../components/Info";
 
 const Spots = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [isShowInfo, setIsShowInfo] = useState(false);
   const [selectedSpot, setSelectedSpot] = useState("");
   const [spotList, setSpotList] = useState<SpotData[]>([]);
 
@@ -44,14 +46,19 @@ const Spots = () => {
           spotList.map((item, index) => {
             if (item.Zipcode === selectedSpot)
               return (
-                <Item key={`${item.Zipcode}-${index}`}>
+                <Item
+                  key={`${item.Zipcode}-${index}`}
+                  onClick={() => setIsShowInfo(true)}
+                >
                   <CardSpot imgUrl={item.Picture1}>{item.Name}</CardSpot>
                 </Item>
               );
           })}
       </Items>
-      {/* Loading animation*/}
+      {/* Loading animation */}
       {isLoading && <Loading />}
+      {/* Card info */}
+      {isShowInfo && <Info setIsShowInfo={setIsShowInfo} />}
     </SpotWrapper>
   );
 };

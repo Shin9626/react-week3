@@ -5,7 +5,7 @@ const FooterWrapper = styled.footer`
   justify-content: center;
   align-items: center;
 
-  height: 80px;
+  height: 60px;
 
   background-color: #001b2e;
 

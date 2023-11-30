@@ -2,7 +2,10 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 const NavWrapper = styled.nav`
-  height: 100px;
+  display: flex;
+  justify-content: center;
+
+  height: 80px;
   background: #001b2e;
   color: white;
 `;
@@ -12,14 +15,15 @@ const Links = styled.div`
   justify-content: center;
   align-items: center;
 
+  min-width: 375px;
   height: 100%;
 
-  * {
+  a {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-grow: 1;
 
-    min-width: 150px;
     height: 100%;
 
     color: white;

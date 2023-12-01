@@ -10,9 +10,8 @@ export const SpotWrapper = styled(Wrapper)`
 export const Items = styled.ul`
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 12px;
-
-  max-width: 1224px;
 `;
 
 export const Item = styled.li`

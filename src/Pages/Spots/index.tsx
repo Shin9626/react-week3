@@ -8,8 +8,9 @@ import Info from "../../components/Info";
 const Spots = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [isShowInfo, setIsShowInfo] = useState(false);
-  const [selectedSpot, setSelectedSpot] = useState("");
+  const [district, setDistrict] = useState("");
   const [spotList, setSpotList] = useState<SpotData[]>([]);
+  const [info, setInfo] = useState<SpotData | null>(null);
 
   useEffect(() => {
     (async () => {
@@ -37,18 +38,23 @@ const Spots = () => {
     }
   };
 
+  const handleItemClick = (item: SpotData) => {
+    setIsShowInfo(true);
+    setInfo(item);
+  };
+
   return (
     <SpotWrapper>
       <p>選擇行政區後可以產生對應景點列表，點擊該景點會出現詳細介紹～</p>
-      <Selector selectedSpot={selectedSpot} setSelectedSpot={setSelectedSpot} />
+      <Selector district={district} setDistrict={setDistrict} />
       <Items>
-        {selectedSpot &&
+        {district &&
           spotList.map((item, index) => {
-            if (item.Zipcode === selectedSpot)
+            if (item.Zipcode === district)
               return (
                 <Item
                   key={`${item.Zipcode}-${index}`}
-                  onClick={() => setIsShowInfo(true)}
+                  onClick={() => handleItemClick(item)}
                 >
                   <CardSpot imgUrl={item.Picture1}>{item.Name}</CardSpot>
                 </Item>
@@ -58,7 +64,7 @@ const Spots = () => {
       {/* Loading animation */}
       {isLoading && <Loading />}
       {/* Card info */}
-      {isShowInfo && <Info setIsShowInfo={setIsShowInfo} />}
+      {isShowInfo && <Info setIsShowInfo={setIsShowInfo} info={info!} />}
     </SpotWrapper>
   );
 };

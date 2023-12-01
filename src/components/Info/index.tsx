@@ -1,17 +1,33 @@
 import { SetStateAction } from "react";
 import { Mask } from "../../UtilityStyled";
+import { InfoWrapper, Title, Desc, CloseBtn } from "./styled";
 
 const Info = (props: InfoProps) => {
-  const { setIsShowInfo } = props;
+  const { info, setIsShowInfo } = props;
+  const { Add, Name, Description, Picture1 } = info;
+
   return (
     <Mask>
-      <button onClick={() => setIsShowInfo(false)}>123</button>
+      <InfoWrapper>
+        <img src={Picture1} alt={Name} />
+        <Title>{Name}</Title>
+        <Desc>{Description}</Desc>
+        <span>{`地址：${Add}`}</span>
+        <CloseBtn onClick={() => setIsShowInfo(false)}>關閉</CloseBtn>
+      </InfoWrapper>
     </Mask>
   );
 };
 
 interface InfoProps {
   setIsShowInfo: React.Dispatch<SetStateAction<boolean>>;
+  info: {
+    Zipcode: string;
+    Add: string;
+    Name: string;
+    Description: string;
+    Picture1: string;
+  };
 }
 
 export default Info;

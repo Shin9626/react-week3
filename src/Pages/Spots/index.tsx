@@ -34,6 +34,7 @@ const Spots = () => {
       const result = data.data.XML_Head.Infos.Info;
       return result;
     } catch (error) {
+      console.error("Error fetching data:", error);
       return error;
     }
   };
@@ -48,23 +49,21 @@ const Spots = () => {
       <p>選擇行政區後可以產生對應景點列表，點擊該景點會出現詳細介紹～</p>
       <Selector district={district} setDistrict={setDistrict} />
       <Items>
-        {district &&
-          spotList.map((item, index) => {
-            if (item.Zipcode === district)
-              return (
-                <Item
-                  key={`${item.Zipcode}-${index}`}
-                  onClick={() => handleItemClick(item)}
-                >
-                  <CardSpot imgUrl={item.Picture1}>{item.Name}</CardSpot>
-                </Item>
-              );
-          })}
+        {spotList
+          .filter((item) => item.Zipcode === district)
+          .map((item, index) => (
+            <Item
+              key={`${item.Zipcode}-${index}`}
+              onClick={() => handleItemClick(item)}
+            >
+              <CardSpot imgUrl={item.Picture1}>{item.Name}</CardSpot>
+            </Item>
+          ))}
       </Items>
       {/* Loading animation */}
       {isLoading && <Loading />}
       {/* Card info */}
-      {isShowInfo && <Info setIsShowInfo={setIsShowInfo} info={info!} />}
+      {isShowInfo && info && <Info setIsShowInfo={setIsShowInfo} info={info} />}
     </SpotWrapper>
   );
 };

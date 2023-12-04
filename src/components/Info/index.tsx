@@ -1,6 +1,6 @@
 import { SetStateAction } from "react";
-import { Mask } from "../../UtilityStyled";
 import { InfoWrapper, Title, Desc, CloseBtn } from "./styled";
+import { Mask } from "../../UtilityStyled";
 
 const Info = (props: InfoProps) => {
   const { info, setIsShowInfo } = props;

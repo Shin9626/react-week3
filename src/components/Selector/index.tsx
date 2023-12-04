@@ -28,7 +28,7 @@ const Selector = (props: SelectorProps) => {
 
 interface SelectorProps {
   district: string;
-  setDistrict: React.Dispatch<React.SetStateAction<string>>;
+  setDistrict: React.Dispatch<string>;
 }
 
 export default Selector;

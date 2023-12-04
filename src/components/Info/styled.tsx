@@ -7,12 +7,15 @@ export const InfoWrapper = styled.div`
 
   padding: 16px;
   width: 800px;
+  height: 600px;
   border-radius: 16px;
 
   background-color: white;
 
   font-size: 20px;
   text-align: center;
+
+  overflow-y: scroll;
 
   animation: popout 0.3s;
   @keyframes popout {

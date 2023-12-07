@@ -2,23 +2,21 @@ import { ChangeEvent } from "react";
 import { SelectorContainer } from "./styled";
 import districtData from "../../constants/zip_code.json";
 
-const Selector = (props: SelectorProps) => {
-  const { district, setDistrict } = props;
-
+const Selector = ({ value, onChange }: SelectorProps) => {
   const handleChange = (e: ChangeEvent<HTMLSelectElement>) => {
     const zip = e.target.value;
-    setDistrict(zip);
+    onChange(zip);
   };
 
   return (
     <SelectorContainer>
-      <select value={district} onChange={(e) => handleChange(e)}>
+      <select value={value} onChange={handleChange}>
         <option value="" disabled>
           選擇行政區
         </option>
-        {districtData.map((item, index) => (
-          <option key={item.zip + index} value={item.zip}>
-            {item.name}
+        {districtData.map(({ zip, name }, index) => (
+          <option key={zip + index} value={zip}>
+            {name}
           </option>
         ))}
       </select>
@@ -27,8 +25,8 @@ const Selector = (props: SelectorProps) => {
 };
 
 interface SelectorProps {
-  district: string;
-  setDistrict: React.Dispatch<string>;
+  value: string;
+  onChange: React.Dispatch<string>;
 }
 
 export default Selector;

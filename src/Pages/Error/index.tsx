@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Wrapper } from "../../UtilityStyled";
+import { Wrapper } from "../../Styled";
 
 const Error = () => (
   <Wrapper>

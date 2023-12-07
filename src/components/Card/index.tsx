@@ -11,9 +11,9 @@ const CardSpot = (props: CardSpotProps) => {
   );
 };
 
-interface CardSpotProps {
+type CardSpotProps = {
   children: string;
   imgUrl: string;
-}
+};
 
 export default CardSpot;

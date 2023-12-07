@@ -1,4 +1,4 @@
-import { Wrapper } from "../../UtilityStyled";
+import { Wrapper } from "../../Styled";
 
 const Home = () => (
   <Wrapper>

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Wrapper } from "../../UtilityStyled";
+import { Wrapper } from "../../Styled";
 
 export const SpotWrapper = styled(Wrapper)`
   justify-content: start;

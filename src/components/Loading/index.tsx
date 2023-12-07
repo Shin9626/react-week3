@@ -1,4 +1,4 @@
-import { Mask } from "../../UtilityStyled";
+import { Mask } from "../../Styled";
 import { LoadingAnimation } from "./styled";
 
 const Loading = () => {

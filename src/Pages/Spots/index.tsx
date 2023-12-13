@@ -47,8 +47,8 @@ const Spots = () => {
           dispatch({ type: SET_SPOT_LIST, payload: data });
           dispatch({ type: SET_LOADING, payload: false });
         }
-      } catch (error: any) {
-        console.error("Error:", error.message);
+      } catch (error) {
+        console.error("Error:", error);
       }
     };
 

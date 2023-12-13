@@ -10,9 +10,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="spots" element={<Error />}>
-            <Route path="comments" element={<h1>留言</h1>}></Route>
-          </Route>
+          <Route path="spots" element={<Spots />} />
+          <Route path="*" element={<Error />} />
         </Route>
       </Routes>
     </HashRouter>
